@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Update Car</title>
+</head>
+
+<body>
+
+<h2>Update Car</h2>
+
+<form action="/updatecar" method="post">
+
+    Car ID <br>
+    <input type="number" name="id" required>
+    <br><br>
+
+    Brand <br>
+    <input type="text" name="brand" required>
+    <br><br>
+
+    Model <br>
+    <input type="text" name="model" required>
+    <br><br>
+
+    Price Per Day <br>
+    <input type="number" step="0.01" name="pricePerDay" required>
+    <br><br>
+
+    <button type="submit">
+        Update Car
+    </button>
+
+</form>
+
+<br>
+
+<a href="/dashboard">Back</a>
+
+</body>
+</html>

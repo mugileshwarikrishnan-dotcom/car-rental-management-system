@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Rental Receipt</title>
+</head>
+
+<body>
+
+<h2>Rental Receipt</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>Rental ID</th>
+    <td th:text="${rental.id}"></td>
+</tr>
+
+<tr>
+    <th>Customer ID</th>
+    <td th:text="${rental.customerId}"></td>
+</tr>
+
+<tr>
+    <th>Car ID</th>
+    <td th:text="${rental.carId}"></td>
+</tr>
+
+<tr>
+    <th>Days</th>
+    <td th:text="${rental.days}"></td>
+</tr>
+
+<tr>
+    <th>Total Amount</th>
+    <td th:text="${rental.totalAmount}"></td>
+</tr>
+
+<tr>
+    <th>Status</th>
+    <td th:text="${rental.status}"></td>
+</tr>
+
+<tr>
+    <th>Rent Date</th>
+    <td th:text="${rental.rentDate}"></td>
+</tr>
+
+<tr>
+    <th>Return Date</th>
+    <td th:text="${rental.returnDate}"></td>
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="window.print()">Print Receipt</button>
+
+<br><br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

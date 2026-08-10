@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>View Cars</title>
+</head>
+
+<body>
+
+<h2>Available Cars</h2>
+
+<!-- Success Message -->
+<p th:if="${message}"
+   th:text="${message}"
+   style="color:green; font-weight:bold;">
+</p>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>Price Per Day</th>
+    <th>Status</th>
+</tr>
+
+<tr th:each="car : ${cars}">
+
+    <td th:text="${car.id}"></td>
+
+    <td th:text="${car.brand}"></td>
+
+    <td th:text="${car.model}"></td>
+
+    <td th:text="${car.pricePerDay}"></td>
+
+    <td th:text="${car.status}"></td>
+
+</tr>
+
+</table>
+
+<br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+
+</html>

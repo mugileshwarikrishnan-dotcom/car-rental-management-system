@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>View Customers</title>
+
+</head>
+
+
+<body>
+
+
+<h2>Customer Details</h2>
+
+
+<table border="1">
+
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>License</th>
+
+</tr>
+
+
+
+<tr th:each="customer : ${customers}">
+
+
+<td th:text="${customer.id}"></td>
+
+<td th:text="${customer.name}"></td>
+
+<td th:text="${customer.phone}"></td>
+
+<td th:text="${customer.email}"></td>
+
+<td th:text="${customer.license}"></td>
+
+
+</tr>
+
+
+</table>
+
+
+
+<br>
+
+<a href="/dashboard">
+Back
+</a>
+
+
+
+</body>
+
+</html>
